@@ -127,7 +127,7 @@
 #define FILE_HEADER_LENGTH 74
 
 // Title definitions
-#define TITLE_COUNT 23		// The amount of custom titles that can be configured in custom_chat_titles.txt
+#define TITLE_COUNT 33		// The amount of custom titles that can be configured in custom_chat_titles.txt
 
 /*====================================
 =            Enumerations            =
