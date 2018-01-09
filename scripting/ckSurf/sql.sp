@@ -1,5 +1,5 @@
  /////////////////////////
-// PREPARED STATEMENTS //
+// PREPARED STATEMENTS yo //
 ////////////////////////
 
 //TABLE CK_SPAWNLOCATIONS
@@ -2111,18 +2111,18 @@ public void sql_selectTopChallengersCallback(Handle owner, Handle hndl, const ch
 				Format(szPointsRatio, 32, "%ip", pointsratio);
 
 			if (pointsratio < 10)
-				Format(szValue, 128, "       %s         » %s (%s)", szPointsRatio, szName, szWinRatio);
+				Format(szValue, 128, "       %s         Â» %s (%s)", szPointsRatio, szName, szWinRatio);
 			else
 				if (pointsratio < 100)
-					Format(szValue, 128, "       %s       » %s (%s)", szPointsRatio, szName, szWinRatio);
+					Format(szValue, 128, "       %s       Â» %s (%s)", szPointsRatio, szName, szWinRatio);
 				else
 					if (pointsratio < 1000)
-						Format(szValue, 128, "       %s     » %s (%s)", szPointsRatio, szName, szWinRatio);
+						Format(szValue, 128, "       %s     Â» %s (%s)", szPointsRatio, szName, szWinRatio);
 					else
 						if (pointsratio < 10000)
-							Format(szValue, 128, "       %s   » %s (%s)", szPointsRatio, szName, szWinRatio);
+							Format(szValue, 128, "       %s   Â» %s (%s)", szPointsRatio, szName, szWinRatio);
 						else
-							Format(szValue, 128, "       %s » %s (%s)", szPointsRatio, szName, szWinRatio);
+							Format(szValue, 128, "       %s Â» %s (%s)", szPointsRatio, szName, szWinRatio);
 
 			topChallengersMenu.AddItem(szSteamID, szValue, ITEMDRAW_DEFAULT);
 			i++;
@@ -2650,9 +2650,9 @@ public void sql_selectProSurfersCallback(Handle owner, Handle hndl, const char[]
 			if (time < 3600.0)
 				Format(szTime, 32, "  %s", szTime);
 			if (i < 10)
-				Format(szValue, 128, "[0%i.] %s    » %s", i, szTime, szName);
+				Format(szValue, 128, "[0%i.] %s    Â» %s", i, szTime, szName);
 			else
-				Format(szValue, 128, "[%i.] %s    » %s", i, szTime, szName);
+				Format(szValue, 128, "[%i.] %s    Â» %s", i, szTime, szName);
 			AddMenuItem(topSurfersMenu, szSteamID, szValue, ITEMDRAW_DEFAULT);
 			i++;
 		}
@@ -2838,11 +2838,11 @@ public void sql_selectTopBonusSurfersCallback(Handle owner, Handle hndl, const c
 					if (time < 3600.0)
 						Format(szTime, 32, "   %s", szTime);
 					if (i == 100)
-						Format(szValue, 128, "[%i.] %s |    » %s", i, szTime, szName);
+						Format(szValue, 128, "[%i.] %s |    Â» %s", i, szTime, szName);
 					if (i >= 10)
-						Format(szValue, 128, "[%i.] %s |    » %s", i, szTime, szName);
+						Format(szValue, 128, "[%i.] %s |    Â» %s", i, szTime, szName);
 					else
-						Format(szValue, 128, "[0%i.] %s |    » %s", i, szTime, szName);
+						Format(szValue, 128, "[0%i.] %s |    Â» %s", i, szTime, szName);
 					topMenu.AddItem(szSteamID, szValue, ITEMDRAW_DEFAULT);
 					PushArrayString(stringArray, szName);
 					if (i == 1)
@@ -2920,11 +2920,11 @@ public void sql_selectTopSurfersCallback(Handle owner, Handle hndl, const char[]
 					if (time < 3600.0)
 						Format(szTime, 32, "   %s", szTime);
 					if (i == 100)
-						Format(szValue, 128, "[%i.] %s |    » %s", i, szTime, szName);
+						Format(szValue, 128, "[%i.] %s |    Â» %s", i, szTime, szName);
 					if (i >= 10)
-						Format(szValue, 128, "[%i.] %s |    » %s", i, szTime, szName);
+						Format(szValue, 128, "[%i.] %s |    Â» %s", i, szTime, szName);
 					else
-						Format(szValue, 128, "[0%i.] %s |    » %s", i, szTime, szName);
+						Format(szValue, 128, "[0%i.] %s |    Â» %s", i, szTime, szName);
 					AddMenuItem(menu, szSteamID, szValue, ITEMDRAW_DEFAULT);
 					PushArrayString(stringArray, szName);
 					if (i == 1)
@@ -6094,7 +6094,7 @@ public void db_sql_selectMapRecordHoldersCallback2(Handle owner, Handle hndl, co
 		CloseHandle(data);
 
 		SQL_FetchString(hndl, 1, szName, MAX_NAME_LENGTH);
-		Format(szValue, 128, "      %s       »  %s", szRecords, szName);
+		Format(szValue, 128, "      %s       Â»  %s", szRecords, szName);
 		g_menuTopSurfersMenu[client].AddItem(szSteamID, szValue, ITEMDRAW_DEFAULT);
 		if (count == 1)
 		{
@@ -6160,21 +6160,21 @@ public void db_selectTop100PlayersCallback(Handle owner, Handle hndl, const char
 						Format(szPerc, 16, "%.1f%c  ", fperc, PERCENT);
 
 			if (points < 10)
-				Format(szValue, 128, "%s      %ip       %s     » %s", szRank, points, szPerc, szName);
+				Format(szValue, 128, "%s      %ip       %s     Â» %s", szRank, points, szPerc, szName);
 			else
 				if (points < 100)
-					Format(szValue, 128, "%s     %ip       %s     » %s", szRank, points, szPerc, szName);
+					Format(szValue, 128, "%s     %ip       %s     Â» %s", szRank, points, szPerc, szName);
 				else
 					if (points < 1000)
-						Format(szValue, 128, "%s   %ip       %s     » %s", szRank, points, szPerc, szName);
+						Format(szValue, 128, "%s   %ip       %s     Â» %s", szRank, points, szPerc, szName);
 					else
 						if (points < 10000)
-							Format(szValue, 128, "%s %ip       %s     » %s", szRank, points, szPerc, szName);
+							Format(szValue, 128, "%s %ip       %s     Â» %s", szRank, points, szPerc, szName);
 						else
 							if (points < 100000)
-								Format(szValue, 128, "%s %ip     %s     » %s", szRank, points, szPerc, szName);
+								Format(szValue, 128, "%s %ip     %s     Â» %s", szRank, points, szPerc, szName);
 							else
-								Format(szValue, 128, "%s %ip   %s     » %s", szRank, points, szPerc, szName);
+								Format(szValue, 128, "%s %ip   %s     Â» %s", szRank, points, szPerc, szName);
 
 			menu.AddItem(szSteamID, szValue, ITEMDRAW_DEFAULT);
 			i++;
